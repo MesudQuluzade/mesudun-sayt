@@ -1,0 +1,23 @@
+:root {
+  --Əsas-rəng: #F5F7FB;
+  --İkinci-rəng: #FFF;
+  --Vurğu-rəngi: #B56DFF;
+  --Mətnin-rəngi: #161B1E;
+}
+
+@font-face {
+  font-family: "WebMaster";
+  src: url("/fonts/masud.ttf");
+}
+
+body {
+  background: var(--Əsas-rəng);
+  font-family: "WebMaster";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--Mətnin-rəngi);
+}
+
+.container {
+  padding: 16px 112px;
+}
