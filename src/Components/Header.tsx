@@ -19,7 +19,7 @@ const Header:React.FC = () => {
         
         <div className='w-[100%] h-[1px] bg-[#F5F7FB]'></div>
 
-        <div className="header-bottom flex justify-between items-center h-[100px] px-[24px]">
+        <div className="header-bottom flex justify-between items-center h-[100px] px-[24px] py-[20px]">
             <span className="logo">
                 WebMaster.az
             </span>

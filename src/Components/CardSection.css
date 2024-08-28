@@ -1,0 +1,12 @@
+.Card-section h2 {
+    font-size: 36px;
+    font-weight: bold !important;
+    line-height: 48px;
+    color: #13171a;
+}
+
+.Card-section .card {
+    background: #fff !important;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
