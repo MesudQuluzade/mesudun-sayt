@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
               <p>Onlayn satışda lider olmaq üçün veb saytlarımızı seçin və rəqibləri qabaqlayın!</p>
               <button className="order mt-[25px]">Sayt Sifariş Et</button>
             </div>
-            <div className="hero-right">
+            <div className="hero-right hidden md:flex">
               <img src="/images/amico.svg" alt="Web Developer" />
             </div>
           </div>
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
               <p className='text-[16px]'>Ən son təkliflərimiz və xidmətlərimizlə tanış olun.</p>
               <button className="order mt-[25px]">Daha Ətraflı</button>
             </div>
-            <div className="hero-right">
+            <div className="hero-right hidden md:flex">
               <img src= "/images/amico.svg" alt="Web Developer" />
             </div>
           </div>
