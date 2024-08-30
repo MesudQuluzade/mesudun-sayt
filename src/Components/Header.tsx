@@ -1,13 +1,18 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import "./Header.css"
 
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
+import { FaChevronRight } from "react-icons/fa";
+
+
 
 
 
 const Header:React.FC = () => {
+    const [aktivLinkimiz, setAktivLinkimiz] = useState<string>("Saytlar Üçün"); // İlk aktiv link üçün state
+
 
     const mobileMenu = useRef<HTMLDivElement>(null)
 
@@ -21,6 +26,10 @@ const Header:React.FC = () => {
         if (mobileMenu.current) {
             mobileMenu.current.classList.remove("aktiv");
         }
+    }
+
+    const linkeKlikle = (link: string) => {
+        setAktivLinkimiz(link);
     }
     
   return (
@@ -40,17 +49,71 @@ const Header:React.FC = () => {
         </div>
 
         <div className="mobile-links">
-            <div className="links-top">
-                <a href="">Saytlar Üçün</a>
-                <a href="">Texniki dəstək</a>
+            <div className=" py-[20px]">
+                <div className="headline-top py-[20px] px-[24px]">
+                    <a href="#" className={aktivLinkimiz === "Saytlar üçün" ? "aktiv" : ""} onClick={() => linkeKlikle("Saytlar üçün")}>Saytlar Üçün</a>
+                    <a href="#" className={aktivLinkimiz === "Texniki dəstək" ? "aktiv" : ""} onClick={() => linkeKlikle("Texniki dəstək")}>Texniki dəstək</a>
+                </div>
+
+                   <div className="single-link px-[12px] text-[1.2rem] font-bold">
+                        <span className='flex justify-between items-center'><a href="">Akademiya</a> <FaChevronRight className='text-gray-300' /></span>
+                    </div>
+          
+
+                <div className="tedris-saheleri bg-[#f4f6fa] ps-[16px] pe-[18px] py-[20px] flex flex-col gap-4 rounded-[18px] mt-[20px]">
+                    <h6 className='text-gray-600 mb-[20px]'>Tədris sahələri</h6>
+                    <div className="single-link">
+                    <span className='flex justify-between items-center'><a href="">Veb Sayt</a> <FaChevronRight className='text-gray-300' /></span>
+                    <h5 className='text-gray-600 text-[11px]'>Frontend və Backend</h5>
+
+                    </div>
+
+                    <div className="single-link">
+                        <span className='flex justify-between items-center'><a href="">Veb Sayt</a> <FaChevronRight className='text-gray-300' /></span>
+                        <h5 className='text-gray-600 text-[11px]'>Frontend və Backend</h5>
+                    </div>
+
+                    <div className="single-link">
+                        <span className='flex justify-between items-center'><a href="">Veb Sayt</a> <FaChevronRight className='text-gray-300' /></span>
+                        <h5 className='text-gray-600 text-[11px]'>Frontend və Backend</h5>
+                    </div>
+
+                    <div className="single-link">
+                        <span className='flex justify-between items-center'><a href="">Veb Sayt</a> <FaChevronRight className='text-gray-300' /></span>
+                        <h5 className='text-gray-600 text-[11px]'>Frontend və Backend</h5>
+                    </div>
+
+                    <div className="single-link">
+                        <span className='flex justify-between items-center'><a href="">Veb Sayt</a> <FaChevronRight className='text-gray-300' /></span>
+                        <h5 className='text-gray-600 text-[11px]'>Frontend və Backend</h5>
+                    </div>
+                  
+                  
+                 </div>
+
+                 <div className="single-link px-[12px] text-[1rem] font-bold my-[20px]">
+                        <span className='flex justify-between items-center'><a href="">Akademiya</a> <FaChevronRight className='text-gray-300' /></span>
+                    </div>
+
+                    <div className="single-link px-[12px] text-[1rem] font-bold my-[20px]">
+                        <span className='flex justify-between items-center'><a href="">Akademiya</a> <FaChevronRight className='text-gray-300' /></span>
+                    </div>
+
+                    <div className="single-link px-[12px] text-[1rem] font-bold my-[20px]">
+                        <span className='flex justify-between items-center'><a href="">Akademiya</a> <FaChevronRight className='text-gray-300' /></span>
+                    </div>
+
+                    <div className="single-link px-[12px] text-[1rem] font-bold my-[20px]">
+                        <span className='flex justify-between items-center'><a href="">Akademiya</a> <FaChevronRight className='text-gray-300' /></span>
+                    </div>
+
+                    
+
+
+
             </div>
 
-            <div className="links-center">
-                <a href="">Veb Sayt</a>
-                <a href="">Domen</a>
-                <a href="">Hostinq</a>
-                <a href="">Xidmətlər</a>
-            </div>
+           
         </div>
     </div>
     <header className='header'>
