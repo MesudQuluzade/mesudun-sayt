@@ -1,15 +1,19 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import "./Header.css"
 
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { IoMdCloseCircleOutline } from "react-icons/io";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronCircleLeft, FaChevronRight } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
 const Header:React.FC = () => {
+
+
+    const navigate = useNavigate()
 
     const mobileMenu = useRef<HTMLDivElement>(null)
 
@@ -23,6 +27,10 @@ const Header:React.FC = () => {
         if (mobileMenu.current) {
             mobileMenu.current.classList.remove("aktiv");
         }
+    }
+
+    const linkeKlikle = (link:string, route:string) => {
+        navigate(route)
     }
     
   return (
@@ -43,16 +51,16 @@ const Header:React.FC = () => {
 
         <div className="mobile-links">
             <div className="service-area">
-                <div className="headline">
+                <div className="headline pe-[1.5rem] ps-[1rem]">
                     <a href="">Saytlar Üçün</a>
                     <a href="">Texniki dəstək</a>
                 </div>
                 
-                <div className="mobile-services bg-[#f4f6fa] py-[20px] ps-[16px] pe-[24px] flex flex-col gap-4">
+                <div className="mobile-services bg-[#f4f6fa] py-[20px] ps-[16px] pe-[24px] flex flex-col my-[40px] gap-4">
                      <h6 className='text-[#62717c] font-semibold text-[14px]'>Xidmətlər Bölməsi</h6>
 
                    <div className="single-link">
-                    <span className='flex justify-between items-center text-[#62717c] font-semibold text-[14px]'><a href="">Veb Sayt</a> <FaChevronRight className='text-[#BDC3CE]' /></span>
+                    <span className='flex justify-between items-center text-[#62717c] font-semibold text-[14px]'><a href="" onClick={() => linkeKlikle("Veb sayt","/xidmet/veb-sayt")}>Veb Sayt</a> <FaChevronRight className='text-[#BDC3CE]' /></span>
                     <h5 className=''> İnternetdə fəaliyyət göstərən platforma...</h5>
 
                    </div>
@@ -68,9 +76,19 @@ const Header:React.FC = () => {
                    </div>
                 </div>
 
-                <a href="">Məsləhət Mərkəzi</a>
-                <a href="">Uğur hekayələrimiz</a>
-                <a href="">Əlaqə</a>
+                <div className="intership grid gap-4">
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+
+                </div>
+
+
+
 
             </div>
 
@@ -83,7 +101,7 @@ const Header:React.FC = () => {
                 <a href="#">Texniki dəstək</a>
             </div>
              
-            <div className="header-top-right flex gap-[40px] text-[14px]">
+            <div className="header-top-right flex  gap-[40px] text-[14px]">
                 <a href="#">Məsləhət Mərkəzi</a>
                 <a href="#">Uğur hekayələrimiz</a>
                 <a href="#">Əlaqə</a>
