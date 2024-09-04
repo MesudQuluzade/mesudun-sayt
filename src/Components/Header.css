@@ -26,7 +26,10 @@
 }
 
 .header-mobile.aktiv {
-    position: absolute;
+    position: fixed;
     width: 100%;
     background: #fff;
+    z-index: 99999;
+    height: 100vh;
+    display: inline-block;
 }
