@@ -20,7 +20,7 @@ const TedrisSahesi:React.FC<TedrisSahesi> = ({basliq, content, shekil}) => {
     }
   return (
 
-    <div className="yonlendirme fixed h-[100vh] bg-[#ccc] z-[50] w-[100%] top-[0]">
+    <div className="yonlendirme fixed h-[100vh] bg-[#ddd] z-[50] w-[100%] top-[0]">
 
     <div className="geri  bg-[#fff] flex justify-between items-center p-[20px] m-[10px] me-[20px] rounded-[10px]">
         <button className='flex text-[20px] items-center' onClick={anaSehifeyeKec}> <FaChevronLeft className='text-[20px] me-[10px]' />Geri</button>
@@ -29,10 +29,10 @@ const TedrisSahesi:React.FC<TedrisSahesi> = ({basliq, content, shekil}) => {
 
     </div>
 
-          <div className=''>
-        <h5>{basliq}</h5>
-        <p className='flex items-center'><img src={shekil} alt="" className='w-[50px]' /> {content}</p>
-    </div>
+      <div className='p-[20px] me-[10px]'>
+          <h5 className='mb-3'>{basliq}</h5>
+          <p className=' bg-[#fff] flex rounded-[10px] items-center'><img src={shekil} alt="" className='w-[50px]' /> {content}</p>
+      </div>
     </div>
 
   

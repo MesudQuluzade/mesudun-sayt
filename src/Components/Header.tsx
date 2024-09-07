@@ -66,18 +66,18 @@ const Header:React.FC = () => {
                    </div>
 
                    <div className="single-link">
-                    <span className='flex justify-between items-center text-[#62717c] font-semibold text-[14px]'><a href="">Domen</a> <FaChevronRight className='text-[#BDC3CE]' /></span>
+                    <span className='flex justify-between items-center text-[#62717c] font-semibold text-[14px]'><a href="" onClick={() => linkeKlikle("Domen","/xidmet/domen")}>Domen</a> <FaChevronRight className='text-[#BDC3CE]' /></span>
                     <h5 className=''> Veb saytın internetdəki ünvandır...</h5>
                    </div>
                    
                    <div className="single-link">
-                    <span className='flex justify-between items-center text-[#62717c] font-semibold text-[14px]'><a href="">Hostluq</a> <FaChevronRight className='text-[#BDC3CE]' /></span>
+                    <span className='flex justify-between items-center text-[#62717c] font-semibold text-[14px]'><a href="" onClick={() => linkeKlikle("Hosting","/xidmet/hosting")}>Hosting</a> <FaChevronRight className='text-[#BDC3CE]' /></span>
                     <h5 className=''>Veb saytların yayımlanması xidməti...</h5>
                    </div>
                 </div>
 
                 <div className="intership grid gap-4">
-                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
+                    <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href=""  className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
                     <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
                     <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
                     <span className='flex justify-between pe-[1.5rem] ps-[1rem] gap-4 items-center'><a href="" className='text-[1rem]'>Təqaüd proqramları</a> <FaChevronRight /></span>
