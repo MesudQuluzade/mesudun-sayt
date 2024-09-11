@@ -1,36 +1,19 @@
-.feedback-container {
-    width: 100%;
-    height: 700px;
-    
-    overflow: hidden; /* Sonsuz scroll efekti üçün overflow gizlədilir */
-    position: relative;
-  }
-  
-  .feedback-items {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
+.element {
+  width: 500px;
+
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
 
 
-    top: 0; /* Hərəkət yuxarıdan başlayır */
-    animation: move-up 10s linear  infinite; /* Hərəkət sonsuz olaraq davam edir */
-  }
 
-  .feedback-items div {
-    background-color: #fff;
-    width: 400px;
-    height: 200px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    padding: 20px;
-  }
-  
-  @keyframes move-up {
-    0% {
-      transform: translateY(0%); /* Elementlər ekranın xaricindən başlayır */
-    }
-    100% {
-      transform: translateY(-80%); /* Elementlər yuxarı çıxaraq ekranın xaricinə çıxır */
-    }
-  }
-  
+.slick-arrow.slick-next {
+display: none !important;
+}
+
+.slick-arrow.slick-prev {
+  display: none !important;
+
+}
