@@ -8,11 +8,12 @@ import Hero from './Components/Hero'
 import TedrisSahesi from './Components/TedrisSahesi'
 import Counter from './Components/Counter'
 import FeedbackSection from './Components/FeedbackSection'
+import MezunlarBurada from './Components/MezunlarBurada'
 
 function App() {
 
   return (
-   <div className='container'>
+   <div className='container mx-auto'>
     <BrowserRouter>
 
 
@@ -31,6 +32,7 @@ function App() {
    <CardSection />
    <Counter />
    <FeedbackSection />
+   <MezunlarBurada />
 
    </BrowserRouter>
    </div>
